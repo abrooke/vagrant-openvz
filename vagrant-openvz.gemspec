@@ -10,7 +10,7 @@ Gem::Specification.new do |spec|
   spec.email         = ["aslandbrooke@yahoo.com"]
   spec.description   = %q{Vagrant plugin for using OpenVZ as a provider.}
   spec.summary       = %q{Vagrant plugin for using OpenVZ as a provider.}
-  spec.homepage      = "https://github.com/abrooke-forks/vagrant-openvz"
+  spec.homepage      = "https://github.com/abrooke/vagrant-openvz"
   spec.license       = "MIT"
 
   spec.files         = `git ls-files`.split($/)
