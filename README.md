@@ -9,7 +9,8 @@ Successfully used in combination with the following vagrant plugins:
 - vagrant-omnibus
 - agrant-berkshelf
 
-## Tested Platform (vagrant + vagrant-openvz + OpenVZ)
+## Tested Platform 
+##### (vagrant + vagrant-openvz + OpenVZ)
 
 - Centos 6.4
 - Others may work, though usability unknown as of now.
