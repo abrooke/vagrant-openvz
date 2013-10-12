@@ -7,7 +7,7 @@ This is primarily a provider plugin for vagrant. The provider integrates openvz 
 Successfully used in combination with the following vagrant plugins:
 
 vagrant-omnibus
-vagrant-berkshelf
+agrant-berkshelf
 
 ## Credits
 
