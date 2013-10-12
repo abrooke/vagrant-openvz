@@ -1,0 +1,10 @@
+Vagrant.configure("2") do |config|
+  config.vm.provider :openvz do |ovz|
+    ovz.template = "centos-6-x86_64.tar.gz"
+    ovz.physpages = "0:512MB"
+    ovz.nameserver = "8.8.8.8"
+    ovz.diskspace = "2000000:2100000"
+    ovz.diskinodes = "150000:1510000"
+    ovz.quotatime = "600"
+  end
+end
