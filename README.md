@@ -1,5 +1,7 @@
 # vagrant-openvz
 
+[![Gem Version](https://badge.fury.io/rb/vagrant-openvz.png)](http://badge.fury.io/rb/vagrant-openvz)
+
 #### LINUX ONLY TECHNOLOGY.
 
 This is provider plugin for vagrant. The provider integrates [OpenVZ](http://openvz.org/Main_Page) with the normal actions associated with vagrant including: up, ssh, halt, destroy.
