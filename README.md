@@ -4,7 +4,7 @@
 
 #### LINUX ONLY TECHNOLOGY.
 
-This is provider plugin for vagrant. The provider integrates [OpenVZ](http://openvz.org/Main_Page) with the normal actions associated with vagrant including: up, ssh, halt, destroy.
+This is a provider plugin for vagrant. The provider integrates [OpenVZ](http://openvz.org/Main_Page) with the normal actions associated with vagrant including: up, ssh, halt, destroy.
 
 Successfully used in combination with the following vagrant plugins:
 
