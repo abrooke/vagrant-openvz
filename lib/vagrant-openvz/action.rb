@@ -148,7 +148,7 @@ module VagrantPlugins
               next
             end
 
-            b2.use Vagrant::Action::Builtin::Call, IsRunning do |env2, intern2_bldr|
+            intern_bldr.use Vagrant::Action::Builtin::Call, IsRunning do |env2, intern2_bldr|
               if !env2[:result]
                 intern2_bldr.use Message, :not_running
                 next

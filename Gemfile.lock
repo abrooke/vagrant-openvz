@@ -13,7 +13,7 @@ GIT
 PATH
   remote: .
   specs:
-    vagrant-openvz (0.0.2)
+    vagrant-openvz (0.0.4)
 
 GEM
   remote: https://rubygems.org/
