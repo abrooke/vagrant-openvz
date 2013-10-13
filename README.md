@@ -50,9 +50,10 @@ During development on Centos 6(.4), in order to use: "bundle exec vagrant box ad
 
 ## ROADMAP (Features not yet added).
 
-* Port Forwarding.
-* Improve usage of env[:ui] logging. 
-* Tokenize all hardcoded text.
+* OpenVZ focused: [Virtual Ethernet devices](http://openvz.org/Virtual_Ethernet_device).
+* Vagrant focused: Port Forwarding.
+* Vagrant focuused: Improve usage of env[:ui] logging. 
+* Vagrant focused: Tokenize all hardcoded text.
 
 ## Credits
 
