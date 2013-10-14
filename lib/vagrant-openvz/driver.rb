@@ -61,6 +61,11 @@ module VagrantPlugins
 		@cli.create vzctlid, settings 
 	  end
 
+	  def set_netadapter(vzctlid,netadapter)
+		@logger.info("Adding network adapter: #{netadapter}")
+		@cli.set_netadapter(vzctlid,netadapter)
+	  end
+	
 	  def start(vzctlid,pubkey)
 		@logger.info('Starting container...')
 		@cli.start(vzctlid,pubkey)
@@ -84,6 +89,11 @@ module VagrantPlugins
 	  def fetch_ip(vzctlid)
 		@cli.fetch_ip(vzctlid)
 	  end
+
+	  def fetch_ip_netadapter(vzctlid)
+		@cli.fetch_ip_netadapter(vzctlid)
+	  end
+
 
 	end
   end

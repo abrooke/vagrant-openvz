@@ -18,6 +18,10 @@ module VagrantPlugins
 		  run(:vzlist,"-a","-H","-t","-o","ip","#{vzctlid}")
 		end
 
+		def fetch_ip_netadapter(vzctlid)
+          run(:vzctl,"exec","#{vzctlid}","ip -4 addr show eth1 | egrep -o '[0-9]\{1,3\}\.[0-9]\{1,3\}\.[0-9]\{1,3\}\.[0-9]\{1,3\}' | grep -v 255")
+		end
+		
 		def create(vzctlid,settings={})
 
 		  # run :rsync, settings[:box_location],settings[:template_location] 
@@ -32,6 +36,12 @@ module VagrantPlugins
 			run :vzctl,'set',vzctlid,"--#{key}","#{value}","--save"  
 		  end
 
+		end
+
+		def set_netadapter(vzctlid,netadapter) 
+		  run :vzctl,'set',vzctlid,"--netdev_add","#{netadapter}","--save"
+          run :vzctl,'exec',vzctlid,"ifconfig","#{netadapter}","up"
+          run :vzctl,'exec',vzctlid,"dhclient","#{netadapter}"
 		end
 
 		def start(vzctlid,pubkey)

@@ -6,6 +6,7 @@ module VagrantPlugins
 	  attr_accessor :physpages
 	  attr_accessor :hostname
 	  attr_accessor :ipadd
+	  attr_accessor :netadapter
 	  attr_accessor :nameserver
 	  attr_accessor :vzctid
 	  attr_accessor :pubkey
@@ -32,7 +33,7 @@ module VagrantPlugins
 
 		errors << "config.physpages" if physpages.nil?
 		errors << "config.hostname" if hostname.nil?
-		errors << "config.ipadd" if ipadd.nil?
+		errors << "config.ipadd or config.netadapter" if ipadd.nil? && netadapter.nil?
 		errors << "config.nameserver" if nameserver.nil?
 		errors << "config.vzctid" if vzctid.nil?
 		errors << "config.pubkey" if pubkey.nil?

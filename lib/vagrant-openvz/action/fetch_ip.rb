@@ -8,8 +8,12 @@ module VagrantPlugins
 
         def call(env)
 		  config = env[:machine].provider_config
-
-          env[:machine_ip] ||= env[:machine].provider.driver.fetch_ip(config.vzctid)
+         
+		  if config.netadapter.nil?		  
+             env[:machine_ip] ||= env[:machine].provider.driver.fetch_ip(config.vzctid)
+		  else
+			 env[:machine_ip] ||= env[:machine].provider.driver.fetch_ip_netadapter(config.vzctid)
+          end
 
           @app.call(env)
         end
