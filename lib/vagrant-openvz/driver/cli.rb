@@ -18,8 +18,8 @@ module VagrantPlugins
 		  run(:vzlist,"-a","-H","-t","-o","ip","#{vzctlid}")
 		end
 
-		def fetch_ip_netadapter(vzctlid)
-          run(:vzctl,"exec","#{vzctlid}","ip -4 addr show eth1 | egrep -o '[0-9]\{1,3\}\.[0-9]\{1,3\}\.[0-9]\{1,3\}\.[0-9]\{1,3\}' | grep -v 255")
+		def fetch_ip_netadapter(vzctlid,netadapter)
+          run(:vzctl,"exec","#{vzctlid}","ip -4 addr show #{netadapter} | egrep -o '[0-9]\{1,3\}\.[0-9]\{1,3\}\.[0-9]\{1,3\}\.[0-9]\{1,3\}' | grep -v 255")
 		end
 		
 		def create(vzctlid,settings={})

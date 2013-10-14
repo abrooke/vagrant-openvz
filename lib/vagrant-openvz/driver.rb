@@ -90,10 +90,9 @@ module VagrantPlugins
 		@cli.fetch_ip(vzctlid)
 	  end
 
-	  def fetch_ip_netadapter(vzctlid)
-		@cli.fetch_ip_netadapter(vzctlid)
+	  def fetch_ip_netadapter(vzctlid,netadapter)
+		@cli.fetch_ip_netadapter(vzctlid,netadapter)
 	  end
-
 
 	end
   end
